@@ -14,34 +14,36 @@ let salto = Math.floor(Math.random() * (10 - 5 + 1)) + 5;
 */
 function CrearAtletas(){
 let atletas = [1, 2, 3];
-let MejorSalto = [];
+let MejorSalto = [0,0,0];
 let SaltoGanador = [];
 let atletaGanador = [];
 
 for (let i = 0 ; i < atletas.length ; i++){
-    for(let e = 0; e < 3; e++){
+    for(let e = 0; e < 4; e++){
         let metros = Math.floor (Math.random()* (10 - 5 + 1)) + 5;
-        console.log(`el atleta ${atletas[i]} , tuvo un salto de ${metros} metros`);
+        console.log(`El atleta ${atletas[i]} , tuvo un salto de ${metros} metros`);
         
-       if (metros > MejorSalto ){
-        MejorSalto = metros;
+       if (metros > MejorSalto[i]){
+        MejorSalto[i] = metros;
        } 
     }
-    console.log(`El mejor salto del atleta  ${atletas[i]} es ${MejorSalto}`);
-    MejorSalto = 0;
-    
-    for (let m = 0 ;)
-    if (MejorSalto > SaltoGanador ){
-        SaltoGanador = MejorSalto;
 
-        
-    }
-    console.log(`El atleta ganador ${atletas[i]} con el salto de ${SaltoGanador}`);
-    
-    
+    console.log(`El mejor salto del atleta  ${atletas[i]} es ${MejorSalto[i]}`);
+   // MejorSalto = 0;
     
     
 }
+let mejor=0,mejorIndiceAtleta=-1;
+for (let m = 0; m <MejorSalto.length; m++){
+    if (MejorSalto[m]>mejor){
+        mejor=MejorSalto[m];
+        mejorIndiceAtleta=m;
+    }
+
+}
+console.log(`El mejor salto es de ${mejor}, y es del atleta ${atletas[mejorIndiceAtleta]}`);
+   
+
 
 }
 CrearAtletas();
