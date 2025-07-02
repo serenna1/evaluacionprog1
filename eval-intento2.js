@@ -13,13 +13,13 @@ funciones a crear:crearAtletas, reaizarSaltos, registrarMejor, mostrarGanador
 let salto = Math.floor(Math.random() * (10 - 5 + 1)) + 5;
 */
 function CrearAtletas(){
-let atletas = [1, 2, 3];
-let MejorSalto = [0,0,0];
+let atletas = [1, 2, 3, 4, 5, 6 ,7 ,8];
+let MejorSalto = [0,0,0,0,0,0,0,0];
 let SaltoGanador = [];
 let atletaGanador = [];
 
 for (let i = 0 ; i < atletas.length ; i++){
-    for(let e = 0; e < 4; e++){
+    for(let e = 0; e < 3; e++){
         let metros = Math.floor (Math.random()* (10 - 5 + 1)) + 5;
         console.log(`El atleta ${atletas[i]} , tuvo un salto de ${metros} metros`);
         
