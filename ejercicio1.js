@@ -45,6 +45,7 @@ JuegoDeAdivinar();
 
 
 //intento 2:
+/*
 function JuegoDeAdivinar (){
     let numeroSecreto = Math.floor(Math.random()*50) + 1;
     let jugadores = [0,0,0,0];
@@ -83,5 +84,68 @@ function JuegoDeAdivinar (){
     }else
     console.log (`Ningun jugador tuvo acierto`);
     
+}
+JuegoDeAdivinar();
+*/
+/*
+JuegoDeAdivinar();
+*//* Simular un juego en el que los jugadores intentan adivinar un numero secreto.
+- se genera un numero secreto entre 1 y 50.✅
+- simular que 4 jugadores intentan adivinarlo con intentos aleatorios.
+- cada uno tiene hasta 10 intentos aleatorios.✅
+- el que adivina primero gana.
+funciones: generarNumero, crearJugadores, realizarIntentos, verificarGandor, etc.
+*/
+let posicionDelGanador = -1;
+let acumuladorDeNumeroGanador = 0;
+let NumeroSecreto = Math.floor(Math.random () * 20 )+1;
+NumeroDeIntento = Math.floor (Math.random()*10)+1;
+let jugadores = [0,0,0,0];
+ganador = false;
+
+function verificandoGanador (posicionjugador){
+    console.log(`El jugador ${posicionjugador}, eligio el numero ${jugadores[posicionjugador]}`)
+    if (jugadores[posicionjugador] === NumeroSecreto){
+        acumuladorDeNumeroGanador = NumeroSecreto;
+        posicionDelGanador = posicionjugador;
+        ganador = true;
+        
+    }else 
+    ganador = false;
+}
+
+function intentosAleatorios(posicionjugador){
+    
+    
+     for(let e = 0 ; e < NumeroDeIntento; e++){
+        jugadores[posicionjugador] =+ Math.floor (Math.random()*20 )+1;
+        verificandoGanador(posicionjugador);
+        if (ganador === true){
+            
+        break;
+      }
+      
+        
+
+    }
+}
+function JuegoDeAdivinar (){
+    console.log(`Los jugadores tienen un numero aleatorio de intentos: ${NumeroDeIntento}, para adivinar el numero: ${NumeroSecreto}`)
+    
+    for (let posicionjugador = 0; posicionjugador < jugadores.length; posicionjugador ++){
+
+        intentosAleatorios(posicionjugador);
+        console.log(`-------------------`);
+        if (ganador === true){
+        console.log(`El jugador  Ganador ${posicionDelGanador}  adivino el numero numero secreto: ${acumuladorDeNumeroGanador}`)
+        break;
+        }
+      
+    }
+    if (ganador === false){
+        console.log(`Ningun jugador adivino el numero. `)
+    }
+    
+
 }
 JuegoDeAdivinar();
