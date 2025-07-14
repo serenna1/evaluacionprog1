@@ -96,6 +96,8 @@ JuegoDeAdivinar();
 - el que adivina primero gana.
 funciones: generarNumero, crearJugadores, realizarIntentos, verificarGandor, etc.
 */
+
+//estas variables son globales necesarias para todas als funciones
 let posicionDelGanador = -1;
 let acumuladorDeNumeroGanador = 0;
 let NumeroSecreto = Math.floor(Math.random () * 20 )+1;
@@ -103,6 +105,7 @@ NumeroDeIntento = Math.floor (Math.random()*10)+1;
 let jugadores = [0,0,0,0];
 ganador = false;
 
+//el parametro en la funciones es la poscion del arreglo jugadores
 function verificandoGanador (posicionjugador){
     console.log(`El jugador ${posicionjugador}, eligio el numero ${jugadores[posicionjugador]}`)
     if (jugadores[posicionjugador] === NumeroSecreto){
