@@ -1,4 +1,3 @@
-//ejercicio de parcial con parametro 
 /*
 2. Competencia de lanzamientos
 Simular una competencia entre jugadores que lanzan dados por puntos.
@@ -10,13 +9,12 @@ Simular una competencia entre jugadores que lanzan dados por puntos.
  Funciones: crearJugadores, realizarLanzamientos, mostrarPuntajes,
 mostrarGanador, etc.
 */
+//en clase se realizo este ejercicio 
 
-//funcion sin parametros en una misma funcion:
 
-const jugadores=[0,0,0,0,0,0,0,0,0,0];
-let puntajeDeGanador = 0 ;
-let posGanador = -1;//es para evitar confunciones porque el -1 no esta en las posiciones de un arreglo 
+ 
 /*
+// ejemplo de una funcion para todo el ejercicio y sin parametros:
 function juego(){
     for(let posJugador = 0; posJugador < jugadores.length ;posJugador++){
         for(let tiro = 0 ;tiro < 5; tiro ++ ){
@@ -36,11 +34,15 @@ function juego(){
 juego();
 */
 
-// una funcion tiee la primicia de tener una unica iniciativa
-//varias funciionescon parametros 
-//tirarDados parte externa el nombre y lo de parentesis es la parte interna
+// concepto : una funcion tiene la primicia de tener una unica iniciativa
+//ejemplo del ejercicio con varias funciiones con parametros:
 
-function tirarDados(cantidadTiros, posJugador1){
+const jugadores=[0,0,0,0,0,0,0,0,0,0];
+let puntajeDeGanador = 0 ;
+let posGanador = -1;//es para evitar confunciones porque el -1 no esta en las posiciones de un arreglo
+
+function tirarDados(cantidadTiros, posJugador1){//tirarDados parte externa (el nombre) y lo de parentesis es la parte interna
+const jugadores=[0,0,0,0,0,0,0,0,0,0];
     for(let tiro = 0 ;tiro < cantidadTiros; tiro ++ ){
             jugadores[posJugador1] += Math.floor(Math.random() * 6) + 1;
             

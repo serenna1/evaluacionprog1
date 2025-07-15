@@ -45,11 +45,11 @@ JuegoDeAdivinar();
 
 
 //intento 2:
-/*
+//funciona:
 function JuegoDeAdivinar (){
     let numeroSecreto = Math.floor(Math.random()*50) + 1;
     let jugadores = [0,0,0,0];
-    let posicionDelGanador = -1;  //preguntar a Lucas porque hay un -1 y no un 0 
+    let posicionDelGanador = -1;  
     let puntaje = 0;
     ganador = false;
     let cantidadDeIntentos = Math.floor(Math.random() * 10)+1;
@@ -86,7 +86,7 @@ function JuegoDeAdivinar (){
     
 }
 JuegoDeAdivinar();
-*/
+
 /*
 JuegoDeAdivinar();
 *//* Simular un juego en el que los jugadores intentan adivinar un numero secreto.
@@ -96,7 +96,8 @@ JuegoDeAdivinar();
 - el que adivina primero gana.
 funciones: generarNumero, crearJugadores, realizarIntentos, verificarGandor, etc.
 */
-
+/*
+//ejercicio en clase 
 //estas variables son globales necesarias para todas als funciones
 let posicionDelGanador = -1;
 let acumuladorDeNumeroGanador = 0;
@@ -152,3 +153,4 @@ function JuegoDeAdivinar (){
 
 }
 JuegoDeAdivinar();
+*/

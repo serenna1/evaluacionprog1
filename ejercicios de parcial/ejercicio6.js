@@ -53,7 +53,7 @@ function MostrarResultados (){
 */
 //intento 2:
 //funciona 
-/*
+
 let equipo1 = 0;
 let equipo2 = 0;
 let penal1 = 0;
@@ -101,8 +101,8 @@ function ejecutarpenales(){
 
 }
 ejecutarpenales();
-*/
 
+//adicional una forma distinto de hacerlo:
 //codigo de gaspar:
 /*
 let equipo1 = [], equipo2 = []
